@@ -1,9 +1,14 @@
 input.onButtonPressed(Button.AB, function () {
-    X = 4
+    if (game2 == 0) {
+        game2 = 1
+        X = 4
+    }
 })
+let game2 = 0
 let X = 0
-X = 0
-while (X == 0) {
+X = 4
+game2 = 0
+while (game2 == 0) {
     basic.showLeds(`
         # . # . #
         # . # . #
@@ -109,13 +114,14 @@ basic.forever(function () {
             . . . . .
             `)
     }
-    while (X <= 0 || X >= 8) {
+    if (X <= 0 || X >= 8) {
+        game2 = 0
+    }
+    while (game2 == 0) {
         if (X <= 0) {
             basic.showString("Awin")
         } else if (X >= 8) {
             basic.showString("Bwin")
-        } else if (input.buttonIsPressed(Button.AB)) {
-            X = 4
         }
     }
 })
