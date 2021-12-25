@@ -24,13 +24,6 @@ while (game2 == 0) {
         . # . . .
         `)
 }
-basic.showLeds(`
-    . . . . .
-    . . . . .
-    . . . . .
-    . . . . .
-    . . . . .
-    `)
 basic.forever(function () {
     if (input.buttonIsPressed(Button.AB)) {
         X = X - 1
