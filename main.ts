@@ -126,9 +126,42 @@ basic.forever(function () {
     }
     while (game2 == 0) {
         if (X <= 0) {
-            basic.showString("Awin")
+            basic.showLeds(`
+                . # # # .
+                # . . . #
+                # . . . #
+                # # # # #
+                # . . . #
+                `)
         } else if (X >= 8) {
-            basic.showString("Bwin")
+            basic.showLeds(`
+                # # # # .
+                # . . . #
+                # # # # .
+                # . . . #
+                # # # # .
+                `)
         }
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . # . . .
+            # # # # #
+            . # . . #
+            . # . . #
+            # . . # #
+            `)
+        basic.showLeds(`
+            . # # # .
+            . . # . .
+            # # # # #
+            . . # . .
+            # # . . .
+            `)
     }
 })
